@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dbms</title>
+    <base href="/" />
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div id="container">
+        <section>
+            <div class="imgbox">
+                <img src="img/signup.png" alt="">
+            </div>
+
+            <div class="contentbox">
+                <div class="formbox">
+                    <p id="lnk2hm"><a href="index.hbs">Back to Home</a></p>
+                    <h2 id="sign_up">SIGN UP</h2>
+                    <p id="below_signup">Already have an account ? <a href="login.hbs">Log in</a></p>
+                    <form action="/users/signup" method="POST">
+                        <div class="box">
+                            <input class="box" type="text" id="" placeholder="Name" name="name" required>
+                        </div>
+                        <div class="box">
+                            <!-- <input type="text" name="" id="" placeholder="Last Name"> -->
+                        </div>
+                        <div class="box">
+                            <input class="box" type="email" name="email" id="" placeholder="youremail@gmail.com" required>
+                        </div>
+                        <div class="box" id="passbox">
+                            <input class="box" id="box4" type="password" minlength="8" placeholder="password" name="password" required>
+                            <div id="toggle" onclick="showHide()"></div>
+                        
+                            <button class="btn" type="submit">Sign Up</button>
+                            <!--<input type="submit" class="btn" value="Sign Up"> -->
+                        
+                        </div>
+                        {{#if message}}
+                        <div class="error-message">
+                            <div class="close" onclick="this.parentElement.remove()">X</div>
+                            {{message}}
+                        </div> 
+                        
+                        {{/if}}
+                        
+                    </form>
+                </div>
+            </div>
+            
+        </section>
+        
+    </div>
+    <script>
+        function showHide() {
+            if (box4.type === 'password') {
+                document.getElementById('box4').setAttribute('type', 'text');
+                toggle.style.backgroundImage = "url('/img/showpass.png')";
+            }
+            else {
+                document.getElementById('box4').setAttribute('type', 'password');
+                toggle.style.backgroundImage = "url('/img/hidepass.png')";
+            }
+        }
+    </script>
+</body>
+
+</html>

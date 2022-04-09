@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Balthazar&family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root
+{
+    --font1:'Poppins', sans-serif;
+}
+#container
+{
+    /* border: 2px solid black; */
+    padding: 0px 100px;
+}
+section
+{
+    position: relative;
+    top: 3rem;
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    background-color: #FFECEC;
+    margin: 0px 10px;
+    box-shadow: 0 0.45rem 0.45rem rgba(0, 0, 0, 0.25), 0 0.45rem 0.45rem rgba(0, 0, 0, 0.25);
+}
+section .imgbox
+{
+    /* position: relative; */
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid black; */
+}
+
+section .imgbox img
+{
+    /* border: 2px solid rgb(99, 72, 72); */
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+section .contentbox
+{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    /* align-items: center; */
+    /* border: 2px solid black; */
+    background-color: #F8D9CF;
+    margin: 20px;
+}
+section .formbox
+{
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#lnk2hm a
+{   
+    font-family: var(--font1);
+    font-weight: 300;
+    font-size: 2.2rem;
+    /* padding-top:50px; */
+    line-height:30px;
+    text-align: center;
+    color: #D21212;
+    text-decoration: none;
+    /* border: 2px solid black ; */
+}
+#lnk2hm a:hover
+{
+    text-decoration: underline;
+}
+
+#sign_up
+{
+    /* border: 2px solid black ; */
+    margin-top: 30px;
+    font-family: var(--font1);
+    font-weight: 600;
+    font-size: 3.2rem;
+    color: #383737;
+}
+#below_signup
+{
+    /* border: 2px solid black ; */
+    line-height: 0rem;
+    font-size:  2.2rem; 
+    margin-top: 30px;
+    font-family: var(--font1);
+    font-weight:350;
+}
+
+
+#below_signup a
+{
+    text-decoration: none;
+    color: #38ABCD;
+    font-family: var(--font1);
+    font-weight:600;
+}
+#below_signup a:hover
+{
+    text-decoration: underline;
+}
+
+section form
+{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+section .box input
+{
+    display: block;
+    margin-bottom:30px;
+    height:80px;
+    width:800px;
+    font-size:2rem;
+    border-radius: 0.45rem;
+    padding-left: 10px;
+    border: hidden;
+    font-family: var(--font1);
+    font-weight:400;
+}
+
+#passbox
+{
+    position: relative;
+}
+
+#toggle
+{
+    /* border:2px solid black; */
+    position: absolute;
+    /* right: 2rem; */
+    top: 20px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+    background-image: url('/img/hidepass.png');
+    opacity: 0.8;
+    cursor: pointer;
+    background-size: cover;
+}
+
+section .btn
+{
+    height:84px;
+    width:820px;
+    border-radius: 0.36rem;
+    font-size:1.8rem;
+    padding: 0.9rem;
+    border: hidden;
+    background-color: #3D3D3D;
+    background-blend-mode: multiply;
+    box-sizing: border-box;
+    box-shadow: 0 0.45rem 0.45rem rgba(0, 0, 0, 0.25), 0 0.45rem 0.45rem rgba(0, 0, 0, 0.25);
+    filter: blur(0.045rem);
+    color: #EFF5DB;
+    font-family: var(--font1);
+    font-weight:700;
+    cursor: pointer;
+}
+.btn:hover
+{
+    text-decoration: underline;
+    font-weight: 800;
+}  
+
+@media screen and (max-width:2732px){
+    section
+    {
+        height: 80%;
+    }
+    section .imgbox img
+    {
+        /* border: 2px solid black; */
+        padding-top: 0px;
+        width: 80%;
+        left: 50px;
+    }
+    section .formbox
+    {
+        padding: 10px 0px;
+    }
+    #lnk2hm a
+    {  
+        font-size: 1.8rem;
+        line-height: 20px;
+    }
+    #sign_up
+    {
+        font-size: 3rem;
+        margin-top: 20px;
+    }
+    #below_signup
+    {
+        font-size:2rem;
+        margin-top:20px;
+    }
+    section form{
+        /* border: 2px solid black; */
+        margin-top: 50px;
+
+    }
+    section .box input
+    {
+        width:50rem;
+        height: 5rem;
+        margin-bottom:20px ;
+
+    }
+    section .btn
+    {
+        width:52rem;
+    }
+}
+
+@media screen and (max-width:2000px){
+  
+    #lnk2hm a
+    {  
+        font-size: 1.4rem;
+        /* line-height: 20px; */
+    }
+    #sign_up
+    {
+        font-size: 2.5rem;
+        margin-top: 15px;
+    }
+    #below_signup
+    {
+        font-size:1.5rem;
+        margin-top:15px;
+    }
+    section form{
+        /* border: 2px solid black; */
+        margin-top: 35px;
+
+    }
+    section .box input
+    {
+        width:40rem;
+        height: 4rem;
+        margin-bottom:15px ;
+        font-size: 1.5rem;
+    }
+    #toggle
+{
+    top: 16px;
+    right:14px;
+    width: 30px;
+    height: 30px;
+}
+
+section .btn
+{
+    width:42rem;
+        height: 4.1rem;
+        margin-bottom:15px ;
+        font-size: 1.5rem;
+    border-radius: 0.36rem;
+    padding: 0.9rem;
+}
+}
+@media screen and (max-width:1800px){
+    section .formbox
+    {
+        padding: 10px 0px;
+         /* border: 2px solid black ; */
+    }
+        
+    section .box input
+    {
+        width:500px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    #toggle
+{
+    top: 12px;
+    width: 25px;
+    height: 25px;
+}
+    section .btn
+    {
+        width:520px;
+        height: 54px;
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width:1600px){
+    section .imgbox img
+    {
+        /* border: 2px solid black; */
+        padding-top: 50px;
+    }
+    section .formbox
+    {
+        justify-content:start;
+    }
+    #lnk2hm a
+    { 
+        line-height: 20px;
+        font-size: 1rem;
+    }
+    #sign_up
+    {
+        margin-top: 10px;
+        font-size: 1.6rem;
+    }
+    #below_signup
+    {
+        font-size:  1rem; 
+        margin-top: 10px;
+    }
+   section form
+    {
+        margin-top: 30px;
+        /* border: 2px solid black; */
+    }
+    section .box input
+    {
+        height: 33px;
+        width:350px;
+        font-size: 1rem;
+        margin-bottom:10px ;
+        border-radius: 2px;
+    }
+    #toggle
+{
+    top: 8px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+}
+    section .btn
+    {
+        height: 35px;
+        width:354px;
+        font-size: 1rem;
+        margin-bottom:10px ;
+        border-radius: 2px;
+        padding: 0px;
+    }
+}
+@media screen and (max-width:1310px){
+
+    #lnk2hm a
+    { 
+        font-size: 0.7rem;
+    }
+    #sign_up
+    {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+    #below_signup
+    {
+        font-size:  0.8rem;
+        margin-top: 5px;
+        /* font-weight: 500;*/
+    }
+   section form
+    {
+        margin-top: 20px;
+        /* border: 2px solid black; */
+    }
+    section .box input
+    {
+        font-size:0.7rem;
+        height:25px;
+        width:250px;
+
+    } 
+    #toggle
+{
+    top: 6px;
+    right: 6px;
+    width: 13px;
+    height: 13px;
+}
+    section .btn
+    {
+        font-size:0.7rem;
+        height:27px;
+        width:254px;
+        font-weight: 550;
+    }
+    /* #toggle
+    {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        width: 1.5rem;
+        height: 1.5rem;
+    } */
+}
+
+@media screen and (max-width:1000px){
+    section
+{
+    top: 20px;
+    flex-wrap: wrap-reverse;
+}
+section .imgbox
+{
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
+}
+
+
+section .contentbox
+{
+    width: 100%;
+}
+section form 
+{
+    margin-top:30px;
+}
+section .box input
+{
+    margin-bottom:10px;
+    height:30px;
+    width:300px;
+    font-size: 0.8rem;
+}
+#toggle
+{
+    top: 8px;
+    right: 10px;
+    width:16px;
+    height:16px;
+}
+section .btn
+{
+    margin-bottom:20px;
+    height:30px;
+    width:300px;
+    font-size: 0.8rem;
+}
+}
+@media screen and (max-width:750px){
+    section .contentbox
+{
+    margin: 10px;
+}
+   #lnk2hm a
+    { 
+        font-size: 0.5rem;
+        line-height: 5px;
+    }
+    #sign_up
+    {
+        font-size: 0.7rem;
+        margin-top: 5px;
+    }
+    #below_signup
+    {
+        font-size:  0.5rem;
+        margin-top: 5px;
+        /* font-weight: 500;*/
+    }
+   section form
+    {
+        margin-top: 20px;
+        /* border: 2px solid black; */
+    } 
+   section .box input
+    {
+        margin-bottom: 10px;
+        height: 20px;
+        width:200px;
+        font-size: 0.5rem;
+    }
+    #box4
+    {
+        margin-bottom: 15px;
+    }
+    #toggle
+    {
+        top: 5px;
+        right: 5px;
+        width: 10px;
+        height: 10px;
+    }
+    section .btn
+    {
+       height: 20px;
+        width:200px;
+        font-size: 0.5rem;
+        font-weight: 520;
+    }
+    }
+@media screen and (max-width:450px){
+    #container
+{
+    /* border: 2px solid black; */
+    padding: 0px 40px;
+}
+    section .contentbox
+    {
+        margin: 5px;
+        /* border:2px solid black; */
+        padding: 0px 0px;
+    }
+
+    #lnk2hm
+    {
+        position: relative;
+        /* border: 2px solid black ; */
+        /* top:-40px; */
+        font-size: 0.4rem;
+    }
+    #sign_up
+    {
+        /* border: 2px solid black ; */
+        /* margin-top: -20px; */
+        font-size: 0.7rem;
+        margin-top: 5px;
+    }
+    #below_signup
+    {
+        /* border: 2px solid black ; */
+        font-size:  0.5rem; 
+        margin-top: 5px;
+    }
+    
+    section form
+    {
+        margin-top: 15px;
+    }
+    section .box input
+    {
+        margin-bottom:10px;
+        height:16px;
+        width:150px;
+        font-size:0.5rem;
+        border-radius: 2px;
+        padding-left: 4px;
+    }
+    
+    #toggle
+    {
+        top: 4px;
+        right: 4px;
+        width: 10px;
+        height: 10px;
+    }
+    #box4
+    {
+        margin-bottom: 20px;
+    }
+    section .btn
+    {
+        height:16px;
+        width:150px;
+        font-size:0.5rem;
+        border-radius: 2px;
+        filter: blur(0.0005rem);
+    }
+}
+
+/*css for error-message*/
+.error-message {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    font-size: 13px;
+    width: 100%;
+    float: left;
+
+    color: #D8000C;
+	background-color: #FFBABA;
+	background-image: url('https://i.imgur.com/GnyDvKN.png');
+}
+div.close {
+    text-align: right;
+    right: 10px;
+    color: #888;
+    cursor: pointer;
+    float: right;
+    margin-left: 4%;
+  }

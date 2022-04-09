@@ -1,0 +1,371 @@
+/* Header CSS Start */
+@import
+url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Inter&family=Montserrat&family=PT+Sans:wght@700&family=Poppins:wght@400;500&family=Rowdies:wght@300&family=Secular+One&display=swap');
+:root{
+    --font1:'IBM Plex Sans', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    box-shadow: 1px 2px 5px 2px rgba(0,0,0,.5);
+}
+.navbar-brand{
+    display:flex;
+}
+.navbar-brand h2{
+    margin-left: 1rem;
+    margin-top:0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-expand-lg .navbar-nav{
+    margin-left: 3.5vw;
+}
+.nav-item{
+    font-family: var(--font1);
+}
+.nav-item:hover{
+font-weight: 600;
+}
+#settingbutton{
+    font-weight: 700;
+
+}
+#settingbutton:hover{
+        opacity:0.7;
+}
+.searchbarcontainer{
+    display: flex;
+    width: 18.8rem;
+}
+.container-fluid #searchhere{
+    width: 13rem;
+}
+.container-fluid #searchbuttonprimary{
+    width: 5rem;
+}
+/* Header CSS ends here! */
+/* Main CSS Start */
+main{
+      padding-top: 3rem;
+      background-color: #FFECEC;
+      /* height: 400rem; */
+      /* width: 100rem; */
+}
+
+.container{
+      width: 56rem; 
+      display: flex;
+      background-color: #FFECEC;
+  }
+  .card2{
+      width: 11rem;
+      background-color: black;
+      color: white;
+      box-shadow: 1px 2px 5px 2px rgba(0,0,0,.5);
+      display: flex;
+      align-items: center;
+  }
+
+  #card-body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .card-body p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  #color{
+        color: white;
+        text-decoration: none;
+  }
+  .card-body:hover{
+        color: black;
+  }
+  .limit{
+      margin-bottom: 5rem;
+  }
+#card{
+      width: 84rem;
+      height: 100rem;
+}
+#webDevelopment{
+      background-color: #f0cccc;
+}
+.card2{
+    display: flex;
+    justify-content: center;
+}
+.card2:hover{
+      color: black;
+      background-color: #f0cccc;
+  }
+#first{
+      color: black;
+}
+#appDevelopment{
+      background-color: #f0cccc;
+}
+#second{
+      color: black;
+}
+#machineLearning{
+      background-color: #f0cccc;
+}
+#third{
+      color: black;
+}
+#competitiveProgramming{
+      background-color: #f0cccc;
+}
+#fourth{
+      color: black;
+}
+#cloudComputing{
+      background-color: #f0cccc;
+}
+#fifth{
+      color: black;
+}
+.text-center{
+      width: 56rem;
+}
+.card{
+    margin-top: 0.2rem;
+}
+
+#webheading{
+    display: flex;
+    justify-content: center;
+    font-family: var(--font1);
+}
+.container1{
+    display: flex;
+    justify-content: center;
+    font-family: var(--font1);
+}
+#webheading{
+    margin-top: 1rem;
+    text-decoration:underline;
+}
+
+/* ***************** */
+.carousel-item img{
+    border: 3px solid black;
+    border-radius: 3px;
+    box-shadow: 1px 2px 5px 2px rgba(0,0,0,.5);
+    height: 23rem ;
+}
+.card-text{
+    width: 45rem;
+    color:rgb(151, 8, 84);
+}
+.typewriter h1{
+    overflow: hidden;
+    border-right: .15em solid black; 
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+    typing 2.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+@keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+  @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: black }
+    }
+    /* ********** */
+.info h5{
+    margin-left: 2rem;
+    font-weight: 700;
+    text-decoration:underline;
+}
+.info p{
+    margin-left: 2rem;
+    margin-right: 1.5rem;
+    font-family: var(--font1);
+}
+.carousel-inner{
+    width: 40rem;
+    /* display: flex;
+    justify-content: center; */
+}
+.container3{
+    display: flex;
+    justify-content: center;
+}
+.container3 h5{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.container3 .btn{
+    margin: 1rem;
+}
+#multiCollapseExample1{
+    color: red;
+}
+#multiCollapseExample2{
+    color: blue;
+}
+#multiCollapseExample3{
+    color: green;
+}
+/* ************ */
+.accordion-body p{
+    display: inline-block;
+    width: 28rem;
+}
+.accordion-body img{
+    width: 18rem;
+    display: inline-block;
+    vertical-align: top;
+    border: 2px solid black;
+    box-shadow: 1px 2px 5px 2px rgba(0,0,0,.5);
+    border-radius: 4px;
+}
+.container1 img{
+    border: 2px solid black;
+    border-radius: 3px;
+    box-shadow: 1px 2px 5px 2px rgba(0,0,0,.5);
+}
+.container4 h6{
+    margin-left: 2rem;
+    font-weight: 700;
+    text-decoration:underline;
+}
+.container4 p{
+    margin-left: 1rem;
+}
+#last_lines{
+    margin-left: 2rem;
+    font-weight: 700;
+    color:rgb(151, 8, 84);
+    opacity: 3;
+}
+#suggestions{
+    margin-left: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+#jsimg{
+    width: 17rem;
+    height: 13rem;
+}
+#phpimg{
+    width: 18rem;
+    
+}
+
+@media only screen and (max-width:1250px){
+    .container{
+        width: 18rem;
+        background-color: #FFECEC;
+        height: 17rem;
+        display: block;
+        align-items: center;
+    }
+    
+    .card2{
+        width: 16.5rem;
+        
+    }
+    .forheading{
+        height:2rem;
+    }
+    #webheading{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-wrap: wrap;
+        width: 100%;
+        flex-flow: row nowrap;
+        display: block;
+        margin-left: 1.5rem;
+    }
+    .card{
+        margin-top: 4rem;
+    }
+    #carousal1{
+        width: 19rem;
+    }
+    #carousal2{
+        width: 19rem;
+    }
+    #carousal3{
+        width: 19rem;
+    }
+    .carousel-inner{
+        width: 19rem;
+    }
+    .carousel-item img{
+        border: 3px solid black;
+        border-radius: 3px;
+        box-shadow: 1px 2px 5px 2px rgba(0,0,0,.5);
+        height: 12rem ;
+    }
+    .fullcontainer{
+        width: 20rem;
+    }
+    .info p{
+        margin-left: 0.5rem;
+        width: 16rem;
+    }
+   .info h5{
+       margin-left: 0.5rem;
+   }
+   #html{
+    width: 16.5rem;
+   }
+   #css{
+    width: 16.5rem;
+   }
+   #js{
+    width: 16.5rem;
+   }
+   .container3 .btn{
+       margin: 0.5rem;
+   }
+   .accordion-body p{
+    width: 14rem;
+    margin-left: 0.2rem;
+   }
+   .accordion-body img{
+       width:14rem;
+       margin-bottom: 1.5rem;
+    }
+   #jsimg{
+       width: 14rem;
+   }
+   #phpimg{
+       width: 14rem;
+   }
+   .limit{
+        margin-bottom: 5rem;
+    }
+    #last_lines{
+        margin-left: 0.5rem;
+    }
+    main{
+        padding-top: 3rem;
+        background-color: #FFECEC;
+        height: 23rem;
+        border-bottom-left-radius: 3rem;
+        border-bottom-right-radius: 3rem;
+    }
+  .container{
+      background-color: white;
+    }
+    #containercolor{
+        background-color: #FFECEC;
+    } 
+}

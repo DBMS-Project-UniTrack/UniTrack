@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Inter&family=Montserrat&family=PT+Sans:wght@700&family=Pacifico&family=Poppins:wght@400;500&family=Rowdies:wght@300&family=Secular+One&family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.imgpro{
+    width: 2.6vw;
+    
+}
+/* .imgsemtop{
+    
+} */
+.bigcontainer{
+    height: 115vh;
+    width: 100%;
+    background-color: #FFECEC;
+
+}
+.cont1{
+    height: 12vh;
+    max-width: 90vw;
+    margin: auto;
+    background-color: #FFECEC;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    
+}
+.btn1{
+    height: 2.5vw;
+width: 9vw;
+margin: 0 .4vw 0 .4vw;
+font-size: 1.3vw;
+border: 2px solid black;
+border-radius: 15px;
+cursor: pointer;
+}
+.para1{
+    display: inline;
+    font-size: 2vw;
+margin: 0 10px 0 0;
+font-weight: 700;
+font-family: 'Inter', sans-serif;
+}
+.button{
+    margin-left: 9vw;
+    margin-top: 4vh;
+    font-weight: bold;
+    
+}
+.cont2{
+    background-color: #FFECEC;
+    height: 90vh;
+    max-width: 90vw;
+    margin: auto;
+}
+.box1{
+    height: 90vh;
+    width: 20vw;
+    background-color: white;
+    box-shadow: 3px 3px 2px pink;
+    position: relative;
+    
+    
+}
+/* .box2{
+    height: 28vh;
+    width: 20vw;
+    background-color: #fff740;
+    position: relative;
+    top: 2vh;
+} */
+.box3{
+    height: 90vh;
+    width: 65vw;
+    background-color: rgb(247, 204, 211);
+    position: relative;
+    bottom: 88vh;
+    left: 23vw;
+    top: -90vh;
+    box-shadow: 2px 2px 2px pink;
+}
+.box1head{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+}
+.box1headings{
+    font-family: 'Inter', sans-serif;
+    padding-left: 1vw;
+    padding-bottom: 0vh;
+    padding-top: 3vh;
+    font-weight: 800;
+    font-size: 4.0vh;
+  
+}
+.listing{
+    font-family: 'Inter', sans-serif;
+    list-style: none;
+    font-size: 2.8vh;
+    padding-left: 1vw;
+padding-top: 1.9vh;
+cursor: pointer;
+
+}
+.navbarnew{
+    height: 12vh;
+    max-width: 65vw;
+    margin: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    font-size: 3vh;
+    font-weight: bold;
+    font-family:  'Inter', sans-serif;
+
+}
+.navi{
+    list-style: none;
+    display: flex;
+    padding: 4.3vh;
+}
+.navilist{
+    padding-left: 6.2vw;
+    cursor: pointer;
+}
+@media screen and (max-width:500px) {
+    .bigcontainer{
+        height: 135vh;
+    }
+    .cont1{
+        height: 12vh;
+    }
+    .para{
+        font-size: 4vw;
+    }
+    .btn{
+        height: 4.5vw;
+width: 9vw;
+font-size: 1.3vw;
+    }
+    .cont2{
+        height: 90vh;
+    }
+    .box1{
+   position: relative;
+height: 67vh;
+width: 85vw;
+top: 46vh;
+left: 3vw;
+    }
+    .box1headings{
+        padding-left: 2vw;
+padding-bottom: 1vh;
+padding-top: 3vh;
+font-size: 3.2vh;
+    }
+    .listing{
+        font-size: 2vh;
+padding-top: 1vh;
+padding-left: 1vw;
+    }
+    /* .box2{
+        height: 60vh;
+width: 34vw;
+top: 7vh;
+left: 52vw;
+    } */
+    .box3{
+        height: 45vh;
+        width: 84vw;
+left: 3vw;
+top: -69vh;
+    }
+    .navbarnew{
+        height: 8vh;
+max-width: 84vw;
+    }
+    .navi{
+        padding: 0vh;
+    }
+    .navilist{
+        font-size: 1.4vh;
+        padding: 1.8vw;
+padding-top: 4vh;
+    }
+    .box3main {
+        height: 55vh;
+        width: 65vw;
+      }
+
+}
+@media screen and (min-width:500px) and (max-width:960px) {
+.bigcontainer{
+    height: 110vh;
+} 
+.cont1{
+    height: 9vh;
+    padding-left: 3.5vw;
+} 
+.button{
+    margin-left: 3vw;
+
+} 
+.cont2{
+    height: 80vh;
+} 
+.box1{
+    height: 53vh;
+}
+/* .box2{ */
+    /* height: 17vh; */
+/* } */
+.box1head{
+    font-size: 3vh;
+}
+.box1headings{
+    font-size: 2.2vh;
+    padding-top: 1.2vh;
+}
+.listing{
+    font-size: 1.8vh;
+padding-top: 1.5vh;
+padding-left: 1vw;
+}
+.box3{
+    height: 53vh;
+top: -53vh;
+}.navbarnew{
+    height: 10vh;
+    font-size: 3vh;
+}
+.navilist{
+    padding-left: 2.2vw;
+font-size: 2vh;
+}
+}
+.box3main{
+    height: 78vh;
+    width: 65vw;
+}
+
+@media screen and (max-width: 990px){
+    .imgpro{
+        width: 5vw;
+    }
+    .l{
+        font-size: 3vw;
+    }
+}

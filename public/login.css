@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Inter&family=Montserrat&family=PT+Sans:wght@700&family=Poppins:wght@400;500&family=Rowdies:wght@300&family=Secular+One&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.logcontainer{
+    max-width: 60vw;
+    height: 97vh;
+    margin: auto;
+    background-color: #F8D9CF;
+    border-radius: 12px;
+    border: #B59191 solid 2px;
+    
+}
+.p1{
+    color: #d21212;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.p11{
+    color: #d21212;
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.heading1{
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.heading2{
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.btn1{
+    width: 100px;
+    height: 40px;
+    /*  */
+    font-size: 1.7rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #38abcd;
+    font-weight: bolder;
+    /*  */
+    margin-left: 1.5vw;
+  
+    position: relative;
+  /*  */
+    left: 41vw;
+    top: -39px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    width: 60vw;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.box input{
+    width: 31.5vw;
+    height: 40px;
+    border: 2px solid #B59191;
+    border-radius: 4px;
+    padding-left: 4px;
+}
+.btn2{
+    width: 31.5vw;
+    height: 42px;
+    color: white;
+    background-color: black;
+    font-size: 1.15rem;
+    border-radius: 4px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.logbox{
+    display: flex;
+    height: 22px;
+    width: 60px;
+    position: relative;
+    left: 13vw;
+    font-family: 'IBM Plex Sans', sans-serif;
+    
+}
+.logbox .btn3{
+    background: none;
+    border: none;
+    color: black;
+}
+.logbox img{
+    height: 20px;
+}
+.btn4{
+    background: none;
+    color: black;
+    border: none;
+    padding-left: 24vw;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
+.btn2{
+    margin-top: 45px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+.image img{
+    height: 175px;
+    position: relative;
+    left: 23vw;
+    top: -17px;
+}
+
+
+@media screen and (max-width: 600px){
+    .p1{
+        font-size: 0.7rem;
+    }
+    .p11{
+        font-size: 0.7rem;
+        padding-bottom: 4px;
+    }
+    .heading1{
+        font-size: 2.0rem;
+    }
+    .heading2{
+        font-size: 1.6rem;
+    }
+    .btn1{
+        top: 8px;
+        left: 16vw;
+        margin-bottom: 4px;
+    }
+    .box input{
+        width: 53vw;
+        height: 35px;
+        margin-top: 12px;
+    }
+    .btn2{
+        width: 56vw;
+        margin-top: 30px;
+    }
+    .btn4{
+        padding-left: 31vw;
+        padding-top: 10px;
+    }
+    .logbox{
+        left: 22vw;
+        top: 5px;
+    }
+    .logcontainer{
+        height: 70vh;
+    }
+    .image img{
+        left: 7vw;
+        top: 0vh;
+    }
+
+}
+@media screen and (min-width: 600px) and (max-width:1100px ) {
+    .btn1{
+        top: 0px;
+        left: 23vw;
+    }
+    .btn4{
+        padding-left: 17vw;
+    }
+    .image img{
+        left: 22vw;
+    }
+    .logcontainer{
+        height: 70vh;
+    }
+}
+
+/*css for error-message*/
+.error-message {
+    position: relative;
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    font-size: 13px;
+    width: 80%;
+    margin-left: 5%;
+
+    color: #D8000C;
+	background-color: #FFBABA;
+	background-image: url('https://i.imgur.com/GnyDvKN.png');
+}
+div.close {
+    text-align: right;
+    right: 10px;
+    color: #888;
+    cursor: pointer;
+    float: right;
+    margin-left: 1%;
+  }
