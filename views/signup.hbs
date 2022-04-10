@@ -30,30 +30,47 @@
                             <!-- <input type="text" name="" id="" placeholder="Last Name"> -->
                         </div>
                         <div class="box">
-                            <input class="box" type="email" name="email" id="" placeholder="youremail@gmail.com" required>
+                            <input list="sems" class="box" name="semester" id="" placeholder="Your current semester"
+                                required>
+                            <datalist id="sems">
+                                <option value=1>
+                                <option value=2>
+                                <option value=3>
+                                <option value=4>
+                                <option value=5>
+                                <option value=6>
+                                <option value=7>
+                                <option value=8>
+                                
+                            </datalist>
+                        </div>
+                        <div class="box">
+                            <input class="box" type="email" name="email" id="" placeholder="youremail@gmail.com"
+                                required>
                         </div>
                         <div class="box" id="passbox">
-                            <input class="box" id="box4" type="password" minlength="8" placeholder="password" name="password" required>
+                            <input class="box" id="box4" type="password" minlength="8" placeholder="password"
+                                name="password" required>
                             <div id="toggle" onclick="showHide()"></div>
-                        
+
                             <button class="btn" type="submit">Sign Up</button>
                             <!--<input type="submit" class="btn" value="Sign Up"> -->
-                        
+
                         </div>
                         {{#if message}}
                         <div class="error-message">
                             <div class="close" onclick="this.parentElement.remove()">X</div>
                             {{message}}
-                        </div> 
-                        
+                        </div>
+
                         {{/if}}
-                        
+
                     </form>
                 </div>
             </div>
-            
+
         </section>
-        
+
     </div>
     <script>
         function showHide() {

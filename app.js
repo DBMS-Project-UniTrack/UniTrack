@@ -115,6 +115,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 const userRoute = require('./routes/users.js');
 app.use('/users', userRoute);
 
+//Requests from /dashboard
+const dashboardRoute = require('./routes/dashboard.js');
+app.use('/dashboard', dashboardRoute);
+
 //Get requests will render the html pages
 app.get('/', (req, res) => {
   console.log(__dirname);
@@ -162,11 +166,12 @@ app.get('/machineLearning.hbs', (req, res) => {
   res.render('machineLearning');
 })
 app.get('/semester.hbs', (req, res) => {
-  res.render('semester');
+  res.render('dashboard');
 })
 app.get('/profile.hbs', (req, res) => {
   res.render('profile');
 })
+
 
 //Server listening on port 5001
 app.listen(5001, () => {

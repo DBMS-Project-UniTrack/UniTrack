@@ -20,14 +20,15 @@ const { rejects } = require("assert");
 
 //Post request for handling signup
 const signupUser = (req, res) => {
-    const { name, email, password } = req.body;
-    if (!name || !email || !password) {
+    const { name, email, password, semester } = req.body;
+    if (!name || !email || !password || !semester) {
         console.log('Fill empty fields');
     }
     const user = {
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        semester: req.body.semester
     }
     //Validation
     User.findOne({ where: { email: req.body.email } }).then((user) => {
@@ -48,6 +49,7 @@ const signupUser = (req, res) => {
                 name,
                 email,
                 password,
+                semester
             });
             //Password Hashing
             bcrypt.genSalt(10, (err, salt) => 
@@ -109,7 +111,7 @@ const checkpw = (req, res) => {
         //new
         req.session.loggedin = true;
         req.session.email = req.user.email;
-        res.redirect('/users/home');
+        res.redirect('/dashboard/home'); //,{loggedInUser: req.user.dataValues}
         //res.status(200).json({message: "Welcome back", token: token})
         
     } else {
@@ -137,17 +139,34 @@ const logout = function (req, res) {
   }
 
 //get home function
-const getHome = function (req, res) {
-    let user =  User.findOne({ where: { email: req.session.email }, attributes: { exclude: ["password"] } });
+async function getHome  (req, res, next) {
+    const userfound = await returnuser(req);
+    let user =  {
+        name: userfound.name,
+        email: userfound.email,
+        id: userfound.id,
+        semester: userfound.semester
+    }
+    //User.findOne({ where: { email: req.session.email }, attributes: { exclude: ["password"] } });
     if (user === null) {
         res.status(404).json({ 'msg': "User not found" });
      }
+     else {
+         req.user = user;
+         next();
+     }
     // res.status(200).json(user);
     //new
+    
+}
+
+const getDashboardHome = (req, res) => {
     if (req.session.loggedin) {
          
-        res.render('home');
-        console.log(user.email);
+        console.log('user = ');
+        console.log(req.user);
+        res.render('dashboardhome', {loggedInUser: req.user.dataValues});
+        console.log(req.user.email);
  
     } else {
  
@@ -155,6 +174,7 @@ const getHome = function (req, res) {
         res.send('Login First');
         res.render('login');
     }
+
 }
 
 //display home page
@@ -172,7 +192,7 @@ const loginView = (req, res) => {
     res.render('login');
 }
 
-module.exports = { loginUser, signupUser, signupView, loginView, logout, getHome, displayHome, checkpw}
+module.exports = { loginUser, signupUser, signupView, loginView, logout, getHome, getDashboardHome, displayHome, checkpw}
 
 
 //     if (req.session.loggedin) {

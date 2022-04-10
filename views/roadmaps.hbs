@@ -18,8 +18,7 @@
       <header>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                   <div class="container-fluid">
-                        <a class="navbar-brand" href="/index.hbs"><img src="img/mainlogo.svg" alt="..."
-                                    width="70rem">
+                        <a class="navbar-brand" href="/index.hbs"><img src="img/mainlogo.svg" alt="..." width="70rem">
                               <h2>UniTrack</h2>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,14 +41,32 @@
                                           <a class="nav-link active" aria-current="page" href="about.hbs"
                                                 target="_main">About</a>
                                     </li>
-                                    
+
                                     <li class="nav-item">
                                           <a class="nav-link active" href="roadmaps.hbs" target="_main">Roadmaps</a>
                                     </li>
-                                    <li class="nav-item">
-                                          <a class="nav-link active" href="/semester.hbs" target="_main">Semester</a>
+                                    <li class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Semester
+                                          </a>
+                                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="/dashboard/1">Semester 1</a></li>
+                                                <li><a class="dropdown-item" href="/dashboard/2">Semester 2</a></li>
+                                                <li><a class="dropdown-item" href="/dashboard/3">Semester 3</a></li>
+                                                <li><a class="dropdown-item" href="/dashboard/4">Semester 4</a></li>
+                                                <li><a class="dropdown-item" href="/dashboard/5">Semester 5</a></li>
+                                                <li><a class="dropdown-item" href="/dashboard/6">Semester 6</a></li>
+                                                <li><a class="dropdown-item" href="/dashboard/7">Semester 7</a></li>
+                                                <li><a class="dropdown-item" href="/dashboard/8">Semester 8</a></li>
+
+                                                <li>
+                                                      <hr class="dropdown-divider">
+                                                </li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                          </ul>
                                     </li>
-                                    <li class="nav-item"> 
+                                    <li class="nav-item">
                                           <a class="nav-link active" href="/contactUs.hbs" target="_main">Contact
                                                 Us</a>
                                     </li>

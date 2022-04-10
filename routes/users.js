@@ -10,7 +10,7 @@ router.get('/login', loginController.loginView);
 router.post('/signup', loginController.signupUser);
 router.post('/login', loginController.loginUser, loginController.checkpw);
 
-router.get('/home',  loginController.getHome );
+router.get('/home',  loginController.getHome, loginController.getDashboardHome );
 
 // Logout user
 router.get('/logout', loginController.logout);
