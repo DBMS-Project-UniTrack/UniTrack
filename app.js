@@ -167,6 +167,9 @@ app.get('/semester.hbs', (req, res) => {
 app.get('/profile.hbs', (req, res) => {
   res.render('profile');
 })
+app.get('/todo.hbs', (req, res) => {
+  res.render('todo');
+})
 
 //Server listening on port 5001
 app.listen(5001, () => {

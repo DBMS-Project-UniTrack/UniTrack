@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My todo</title>
+    <link rel="stylesheet" href="todo.css">
+    <script src="todo.js" defer></script>
+    <script src="https://kit.fontawesome.com/a859732d8e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a859732d8e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="cont">
+        <header>Todo App</header>
+        <div class="inputfeild">
+            <form action="/todoback">
+                <input id="text" name="text" type="text" placeholder="ADD NEW TASK">
+                <input class="calendar" id="date" name="date" type="date" placeholder="Enter deadline">
+                <button id="submit" name="submit" type="submit" class="btn"><i class="fa fa-plus"></i></button>
+            </form>
+        </div>
+
+        <ul class="todolist">
+            {{#mesg}}
+            {{#each data}}
+            <li class="listing">{{task}}<span><i class="fa fa-trash"></i></span></li>
+            <div class="box">{{deadline}}</div>
+            {{/each}}
+            {{/mesg}}
+        </ul>
+        <div class="footer">
+            <form action="/allcleartodo">
+                <!-- <span>You have 4 pending tasks</span> -->
+                <button id="submit" name="submit" type="submit" class="btn2">Clear All</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
