@@ -1,0 +1,96 @@
+.left-fixednav {
+    position: fixed;
+    width: 20vw;
+    height: 80%;
+    margin-left: 2vw;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-45%);
+
+    background: #151718;
+    border-radius: 35px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.bg-container-main {
+    position: absolute;
+    width: 76vw;
+    height: 80%;
+    margin-top: 2rem;
+    margin-left: 24vw;
+    background: #ffffff;
+    align-items: center;
+    
+}
+
+.username {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 1em;
+}
+
+.dropdown {
+    width: 100%;
+}
+
+.profilepic-big {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+  
+    object-fit: cover;
+    object-position: center right;
+  }
+
+.profilepic-big-div {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.options-sidebar {
+    padding-left: 5%;
+}
+
+.bg-container-right-below {
+    position: absolute;
+    height: 90%;
+    width: 96%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+}
+
+.right-below-left {
+    float: left;
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    height: 100%;
+}
+
+.right-below-right {
+    float: right;
+    background-color: rgb(255, 255, 255);
+    width: 26%;
+    height: 100%;
+    margin-left: 2rem;
+    padding: 1%;
+
+}
+
+.whatwouldyoulike {
+    font-weight: 600;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #000000;
+}
+
+.smallsize {
+    font-size: small;
+}
+
+.redbtn {
+    background-color: #ff725e;
+}

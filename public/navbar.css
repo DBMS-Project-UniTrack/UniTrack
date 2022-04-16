@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Inter&family=Montserrat&family=PT+Sans:wght@700&family=Poppins:wght@400;500&family=Rowdies:wght@300&family=Secular+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --font1:'IBM Plex Sans', sans-serif;
+}
+.navigation{
+    height: 15vh;
+    /* height: 161px; */
+    width: 100vw;
+    display: flex;
+    background-color: 
+    #FFFFFF;
+}
+.logo1 img{
+    height: 7vh;
+position: relative;
+left: 0vh;
+margin:0 10px 0 0;
+}
+.navigation .nav-box1{
+    width: 20vw;
+    height: 15vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+/* .nav-box1 h2{
+    font-family: var(--font1);
+    font-weight: bolder;
+    font-size: 2rem;
+
+
+} */
+.uni{
+    font-family: var(--font1);
+    font-weight: bolder;
+    font-size: 2rem;
+    color: black;
+text-decoration: none;
+}
+.navigation .nav-box2{
+    width: 90vw;
+    height: 15vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.nav-item{
+    margin: 0 0 0 9vh;
+}
+.nav-box2 ul{
+    display: flex;
+    align-items: center;
+    
+   
+}
+.l{
+    position: relative;
+top: 6vh;
+font-size: 1.8vw;
+font-weight: bold;
+top: 0vh;
+}
+/* .l1{ */
+    
+/* top: 12px; */
+/* left: 30vw; */
+/* } */
+/* .l2{ */
+    
+/* left: 36.3vw; */
+/* } */
+ /* .l3{
+    
+left: 31.1vw;
+}
+.l4{
+    
+    left: 40vw;
+} */ 
+/* .l5{ */
+    
+    /* left: 40.5vw; */
+/* } */
+.nav-box2 ul li{
+    list-style: none;
+    
+}
+.nav-box2 ul li a{
+    color: #000000;
+    /* font-family: Poppins; */
+    font-family: var(--font1);
+    font-style: normal;
+    font-weight: 400;
+   
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding:0 20px ;
+
+}
+.nav-box2 ul li a:hover{
+    font-weight: bolder;
+}
+/* .inputnav{
+    height: 4.3vh;
+width: 14vw;
+border-radius: 28px;
+padding: 0px 0px 0px 10px;
+border: 2px solid black;
+} */
+/* .searchbar1{
+    height: 25px;
+width: 25px;
+border-radius: 6px;
+background-color: white;
+cursor: pointer;
+border: none;
+} */
+.nav-box3{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 20vw;
+    height: 15vh;
+    position: relative;
+    right: 101px;
+}

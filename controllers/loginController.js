@@ -1,4 +1,5 @@
-const User = require("../models").Login_user; //table
+const User = require("../models").Login_user; //table login_users
+
 const bcrypt = require("bcryptjs");
 const jwt =require('jsonwebtoken');
 const dotenv = require('dotenv');
@@ -16,6 +17,17 @@ var session = require('express-session');
 const bodyParser = require('body-parser');
 const { resolve } = require("path");
 const { rejects } = require("assert");
+
+const mysql = require('mysql2');
+
+// Connection Pool
+let connection = mysql.createConnection({
+    host: process.env.DATABASE_HOST,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE,
+    port: process.env.DATABASE_PORT
+});
 
 
 //Post request for handling signup
@@ -51,6 +63,10 @@ const signupUser = (req, res) => {
                 password,
                 semester
             });
+
+            saveProfile(name, email, semester);
+
+
             //Password Hashing
             bcrypt.genSalt(10, (err, salt) => 
             bcrypt.hash(newUser.password, salt, (err, hash) => {
@@ -61,6 +77,18 @@ const signupUser = (req, res) => {
                 .then(res.render('login'))
                 .catch((err) => console.log(err));
             }));
+        }
+    })
+}
+
+function saveProfile(name, email, semester) {
+
+    connection.query('insert into Profiles(name, email, semester) values(?, ?, ?)', [name, email, semester], (err, rows) => {
+        if(!err){
+            console.log('Inserted values in profiles table');
+        }
+        else{
+            console.log('Couold not insert values in profiles table');
         }
     })
 }
@@ -194,19 +222,5 @@ const loginView = (req, res) => {
 
 module.exports = { loginUser, signupUser, signupView, loginView, logout, getHome, getDashboardHome, displayHome, checkpw}
 
-
-//     if (req.session.loggedin) {
-         
-//         res.render('/home.html', {
-//             title:"Dashboard",
-//             name: req.session.name,     
-//         });
- 
-//     } else {
- 
-//         req.flash('success', 'Please login first!');
-//         res.redirect('/login.html');
-//     }
-// };
 
 

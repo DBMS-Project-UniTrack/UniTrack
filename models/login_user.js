@@ -1,7 +1,8 @@
 'use strict';
 const {
-  Model
+  Model, DataTypes
 } = require('sequelize');
+const { sequelize } = require('.');
 module.exports = (sequelize, DataTypes) => {
   class Login_user extends Model {
     /**
@@ -24,3 +25,24 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Login_user;
 };
+
+// module.exports = (sequelize, DataTypes) => {
+//   class Profile extends Model {
+//     static associate(models){
+
+//     }
+//   }
+//   Profile.init({
+//     name: DataTypes.STRING,
+//     email: DataTypes.STRING,
+//     semester: DataTypes.INTEGER,
+//     roll_number: DataTypes.STRING,
+//     enrollment_number: DataTypes.STRING,
+//     phone_number: DataTypes.INTEGER,
+//     profilepic: DataTypes.BLOB
+//   }, {
+//     sequelize,
+//     modelName: 'Profile',
+//   });
+//   return Profile;
+// }

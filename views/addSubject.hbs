@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Upload Subjects</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    {{!-- <script type="text/javascript" src="/static/js/uploaddownloadfiles.js"></script> --}}
+</head>
+
+<body>
+
+    {{#if semid}}
+    <form class="row g-3 " id="uploadSingleFileForm" method="POST" action="/dashboard/syllabus/{{semid}}/addsubject/addsubjectform" enctype="multipart/form-data" novalidate>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" value="{{this.first_name}}"
+                    placeholder="Subject Code" name="subject_code">
+                <label for="floatingInput">Subject Code</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" value="{{this.last_name}}"
+                    placeholder="Subject Name" name="subject_name">
+                <label for="floatingInput">Subject Name</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="numeric" class="form-control" id="floatingInput" value="{{this.email}}"
+                    placeholder="Semester" name="semester">
+                <label for="floatingInput">Semester</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" value="{{this.phone}}" placeholder="Type"
+                    name="type">
+                <label for="floatingInput">Type</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="numeric" class="form-control" id="floatingInput" value="{{this.phone}}"
+                    placeholder="credits" name="credits">
+                <label for="floatingInput">Credits</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="numeric" class="form-control" id="floatingInput" value="{{this.phone}}"
+                    placeholder="lectures per week" name="lectures">
+                <label for="floatingInput">Lectures per week</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="numeric" class="form-control" id="floatingInput" value="{{this.phone}}" name="tuts">
+                <label for="floatingInput">Tut per week</label>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" value="{{this.phone}}" name="viewlink">
+                <label for="floatingInput">Link for opening</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="uploadfile">Choose a File:</label>
+            <input type="file" class="form-control" placeholder="Choose a upload file" name="file" required></input>
+        </div>
+
+
+        <div class="col-12 d-grid">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+    {{/if}}
+
+</body>
+
+</html>
