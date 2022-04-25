@@ -188,7 +188,7 @@ font-weight: bold;
     height: 74vh;
     width: 43vw;
     position: relative;
-    top: 36vh;
+    top: 20vh;
     left: 6vw;
     font-family: var(--font1);
 }
@@ -199,7 +199,7 @@ color: gray;
 margin: 0 0 4px 0;
 }
 .mainboxa{
-    font-size: 5vw;
+    font-size: 3.8vw;
 line-height: 4.5vw;
 font-weight: 600;
 }
@@ -217,7 +217,7 @@ font-weight: lighter;
     width: 33vw;
 left: 15vw;
 position: relative;
-top: 40vh;
+top: 20vh;
 }
 .dem{
     position: relative;
@@ -372,13 +372,13 @@ top: 234vh;
     }
     .boxa{
         height: 42vh;
-        top: 15vh;
+        top: 14vh;
     }
     .img1 img{
-        top: 17vh;
+        top: 15vh;
     }
     .imgbox{
-        height: 18vh;
+        height: 16vh;
     }
     .container2{
         height: 55vh;

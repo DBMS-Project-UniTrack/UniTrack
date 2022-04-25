@@ -3,12 +3,12 @@
     --font1:'IBM Plex Sans', sans-serif;
 }
 .aboutcona{
-    height: 376vh;
+    height: 130vh;
     width: 100%;
     background-color: #FFECEC;
 }
 .aboutcona1{
-    height: 85vh;
+    height: 83vh;
     width: 42%;
     background-color:#FFECEC;
     /* transform: rotate(161deg); */
@@ -28,7 +28,7 @@ color: black;
 position: relative;
 /* left: -198px; */
 /* top: 189px; */
-font-size: 5vw;
+font-size: 4.5vw;
 font-family: var(--font1);
 }
 .aboutpara1{
@@ -50,7 +50,7 @@ display: inline;
     /* transform: rotate(199deg); */
     color: black;
     position: relative;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-family: var(--font1);
 }
 /* .aboutpara2{
@@ -83,7 +83,7 @@ top: -26vw; */
     max-width: 98vw;
     margin: auto;
     background-color:#C4C4C4;
-    height: 50vh;
+    height: 40vh;
     position: relative;
     top: -15vh;
     border-radius: 1vw;
@@ -98,7 +98,7 @@ display: flex;
 top: 19vh;
 left: 20vw;
 }
-.aboutcona3{
+/* .aboutcona3{
     max-width: 98vw;
     margin: auto;
     background-color: #C4C4C4;
@@ -106,7 +106,7 @@ left: 20vw;
     position: relative;
     top: -12vh;
 border-radius: 1vw;
-}
+} */
 .abouthead2{
     text-align: center;
     font-size: 3.5rem;
@@ -198,6 +198,10 @@ font-size: 1.3vw;
     .aboutimg3{
         width: 39vw;
     }
+    .aboutcona2{
+        height: 36vh;
+        font-size: 2vw;
+    }
     .anotherbox{
         height: 79vh;
     }
@@ -205,7 +209,21 @@ font-size: 1.3vw;
         font-size: 4vw;
     }
     .aboutcona{
-        height: 350vh;
+        height: 105vh;
+    }
+    .aboutcona1{
+        height: 70vh;
+        top: 16vh;
+    }
+    .abouthead2{
+        
+        font-size: 3.0rem;
+        
+    }
+    .aboutpara6{
+        
+        font-size: 1.6vw;
+        
     }
     .afg{
         height: 13vh;
@@ -245,6 +263,26 @@ font-size: 1.3vw;
         height: 33px;
         border-radius: 9px;
     }
+    .aboutcona1{
+        height: 70vh;
+        top: 14vh;
+
+    }
+    .aboutcona1{
+        height: 38vh;
+    
+
+    }
+    .abouthead2{
+        
+        font-size: 3.0rem;
+        
+    }
+    .aboutpara6{
+        
+        font-size: 1.6vw;
+        
+    }
     .aboutconb1{
         height: 58vh;
     }
@@ -276,10 +314,10 @@ font-size: 1.3vw;
         height: 12vh;
     }
     .aboutcona{
-        height: 288vh;
+        height: 105vh;
     }
-    .aboutcona3{
+    /* .aboutcona3{
         height: 180vh;
-    }
+    } */
     
 }

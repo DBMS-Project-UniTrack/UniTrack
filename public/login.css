@@ -7,7 +7,7 @@
 }
 .logcontainer{
     max-width: 60vw;
-    height: 97vh;
+    height: 100vh;
     margin: auto;
     background-color: #F8D9CF;
     border-radius: 12px;
@@ -30,16 +30,18 @@
 .heading1{
     color: black;
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bolder;
     font-family: 'IBM Plex Sans', sans-serif;
+    padding-top: 2vh;
 }
 .heading2{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
     text-align: center;
     font-weight: 400;
     font-family: 'IBM Plex Sans', sans-serif;
+    padding-top: 2vh;
 }
 .btn1{
     width: 100px;
@@ -56,8 +58,8 @@
   
     position: relative;
   /*  */
-    left: 41vw;
-    top: -39px;
+    left: 37vw;
+    top: -37px;
     font-family: 'IBM Plex Sans', sans-serif;
 }
 .box{
@@ -65,7 +67,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 230px;
+    height: 236px;
     width: 60vw;
     font-family: 'IBM Plex Sans', sans-serif;
 }
@@ -75,10 +77,11 @@
     border: 2px solid #B59191;
     border-radius: 4px;
     padding-left: 4px;
+    margin-top: 4vh;
 }
 .btn2{
     width: 31.5vw;
-    height: 42px;
+    height: 50px;
     color: white;
     background-color: black;
     font-size: 1.15rem;
@@ -115,10 +118,11 @@
     font-family: 'IBM Plex Sans', sans-serif;
 }
 .image img{
-    height: 175px;
+    height: 178px;
     position: relative;
-    left: 23vw;
-    top: -17px;
+    left: 22vw;
+    top: 7vh;
+    width: 183px;
 }
 
 
@@ -134,7 +138,7 @@
         font-size: 2.0rem;
     }
     .heading2{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     .btn1{
         top: 8px;
@@ -159,7 +163,7 @@
         top: 5px;
     }
     .logcontainer{
-        height: 70vh;
+        height: 100vh;
     }
     .image img{
         left: 7vw;
@@ -179,7 +183,7 @@
         left: 22vw;
     }
     .logcontainer{
-        height: 70vh;
+        height: 100vh;
     }
 }
 
