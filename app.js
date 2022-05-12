@@ -108,52 +108,116 @@ app.get('/signup.hbs', (req, res) => {
   res.render('signup');
 })
 app.get('/index.hbs', (req, res) => {
-  res.render('index');
-})
-app.get('/home.hbs', (req, res) => {
-  res.render('home');
+  let notloggedin = true;
+  if(req.session.loggedin){
+    notloggedin = false;
+    res.render('index', {notloggedin});
+  }
+  else {
+    notloggedin = true;
+    res.render('index', {notloggedin});
+  }
+  
 })
 app.get('/about.hbs', (req, res) => {
-  res.render('about');
-})
-app.get('/index.hbs', (req, res) => {
-  res.render('index');
+  let notloggedin = true;
+  if(req.session.loggedin){
+    notloggedin = false;
+    res.render('about', {notloggedin});
+  }
+  else {
+    notloggedin = true;
+    res.render('about', {notloggedin});
+  }
 })
 app.get('/contactUs.hbs', (req, res) => {
-  res.render('contactUs');
+  let notloggedin = true;
+  if(req.session.loggedin){
+    notloggedin = false;
+    res.render('contactUs', {notloggedin});
+  }
+  else {
+    notloggedin = true;
+    res.render('contactUs', {notloggedin});
+  }
 })
 app.get('/roadmaps.hbs', (req, res) => {
-  res.render('roadmaps');
+  let notloggedin = true;
+  if(req.session.loggedin){
+    notloggedin = false;
+    res.render('roadmaps', {notloggedin});
+  }
+  else {
+    notloggedin = true;
+    res.render('roadmaps', {notloggedin});
+  }
 })
 app.get('/appDevelopment.hbs', (req, res) => {
-  res.render('appDevelopment');
+  let notloggedin = true;
+  if(req.session.loggedin){
+    notloggedin = false;
+    res.render('appDevelopment', {notloggedin});
+  }
+  else {
+    notloggedin = true;
+    res.render('appDevelopment', {notloggedin});
+  }
 })
 app.get('/webDevelopment.hbs', (req, res) => {
-  res.render('webDevelopment');
+  let notloggedin = true;
+  if(req.session.loggedin){
+    notloggedin = false;
+    res.render('webDevelopment', {notloggedin});
+  }
+  else {
+    notloggedin = true;
+    res.render('webDevelopment', {notloggedin});
+  }
 })
 app.get('/cloudComputing.hbs', (req, res) => {
-  res.render('cloudComputing');
+  let notloggedin = true;
+  if(req.session.loggedin){
+    notloggedin = false;
+    res.render('cloudComputing', {notloggedin});
+  }
+  else {
+    notloggedin = true;
+    res.render('cloudComputing', {notloggedin});
+  }
 })
 app.get('/competitiveProgramming.hbs', (req, res) => {
-  res.render('competitiveProgramming');
+  let notloggedin = true;
+  if(req.session.loggedin){
+    notloggedin = false;
+    res.render('competitiveProgramming', {notloggedin});
+  }
+  else {
+    notloggedin = true;
+    res.render('competitiveProgramming', {notloggedin});
+  }
 })
 app.get('/machineLearning.hbs', (req, res) => {
-  res.render('machineLearning');
+  let notloggedin = true;
+  if(req.session.loggedin){
+    notloggedin = false;
+    res.render('machineLearning', {notloggedin});
+  }
+  else {
+    notloggedin = true;
+    res.render('machineLearning', {notloggedin});
+  }
 })
-app.get('/semester.hbs', (req, res) => {
-  res.render('dashboard');
-})
+
 app.get('/profile.hbs', (req, res) => {
   res.render('profile');
-})
-app.get('/todo.hbs', (req, res) => {
-  res.render('todo');
 })
 
 
 //Server listening on port 5001
-app.listen(5001, () => {
+var server =  app.listen(5001, () => {
   console.log('server is listening on port 5001');
 })
+
+server.setTimeout(500000);
 
 module.exports = app;

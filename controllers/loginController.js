@@ -152,15 +152,15 @@ const checkpw = (req, res) => {
 
 //logout 
 const logout = function (req, res) {
-    if (!req.session) {
+    if (req.session.loggedin) {
             req.session.destroy(function(err){
             if(!err) {
-                res.redirect('/');
+                res.redirect('/index.hbs');
             }
         })
     }
     else {
-        res.redirect('/');
+        res.redirect('/index.hbs');
       }
     //req.flash('success', 'Login Again Here');
     //res.redirect('/login.html');

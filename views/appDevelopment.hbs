@@ -12,64 +12,70 @@
       <link rel="stylesheet" href="appDevelopment.css">
       <link rel="shortcut icon" href="img/WebsiteLogoSample.png" type="image/x-icon">
       <title>Roadmap for Android Development</title>
+
+      
 </head>
 
 <body>
       <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="container-fluid">
-                        <a class="navbar-brand" href="index.hbs"><img src="img/mainlogo.svg" alt="..."
-                                    width="70rem">
-                              <h2>UniTrack</h2>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                              aria-expanded="false" aria-label="Toggle navigation">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi"
-                                    fill="currentColor" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
-                                    </path>
-                              </svg>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li class="nav-item">
-                                          <a class="nav-link active" aria-current="page" href="index.hbs"
-                                                target="_main">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                          <a class="nav-link active" aria-current="page" href="about.hbs"
-                                                target="_main">About</a>
-                                    </li>
-                                    
-                                    <li class="nav-item">
-                                          <a class="nav-link active" href="roadmaps.hbs" target="_main">Roadmaps</a>
-                                    </li>
-                                    {{!-- <li class="nav-item">
-                                          <a class="nav-link active" href="Mytask.html" target="_main">My Task</a>
-                                    </li> --}}
-                                    <li class="nav-item">
-                                          <a class="nav-link active" href="semester.hbs" target="_main">Semester</a>
-                                    </li>
-                                    <li class="nav-item">
-                                          <a class="nav-link active" href="contactUs.hbs" target="_main">Contact
-                                                Us</a>
-                                    </li>
-                              </ul>
-                              {{!-- <div class="searchbarcontainer">
-                                    <input class="form-control me-2" id="searchhere" type="search"
-                                          placeholder="Search here" aria-label="Search">
-                                    <button type="button" id="searchbuttonprimary"
-                                          class="btn btn-primary">Search</button>
-                              </div> --}}
-                        </div>
-                  </div>
-            </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" style="margin-bottom: .1em;">
+        <div class="container-fluid">
+            <div class="logo1" ><img src="img/mainlogo.svg" style="height: 7vh;
+position: relative;
+left: 0vh;
+margin:0 10px 0 0;" alt=""></div>
+            <a class="navbar-brand" href="/index.hbs" style="font-weight: 800;">UniTrack</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  ml-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.hbs">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.hbs">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/roadmaps.hbs">Roadmaps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactUs.hbs">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard/home">Dashboard</a>
+                    </li>
+                    {{#if notloggedin}}
+                    <li class="nav-item btn1" style="font-weight: 600; color:black;">
+                        <a class="nav-link " href="login.hbs">Log In</a>
+                    </li>
+                    <li class="nav-item btn2" style="font-weight: 600;">
+                        <a class="nav-link " href="signup.hbs" style="color: white;">Sign Up</a>
+                    </li>
+                    {{!-- {{else}}
+                    <li class="nav-item dropdown d-flex ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="imgpro" src="img/profile-user.png" style="width: 2vw;" class="rounded-circle">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/profile.hbs">Edit Profile</a>
+                        <a class="dropdown-item" href="/users/logout">Log Out</a>
+                    </div>
+                </li> --}}
+                    {{/if}}
+
+                </ul>
+
+            </div>
+        </div>
+      </nav>
       </header>
 
       <main>
-            <div class="container " >
+            <div class="container ">
 
                   <div class="card2">
                         <a href="webDevelopment.hbs" id="color">
@@ -160,14 +166,14 @@
                                                       </div>
                                                 </div>
                                                 <div class="carousel-item" id="carousal2">
-                                                      <img src="img/appDevelopmentcarousal2.jpg"
-                                                            class="d-block w-100" alt="image error!!!">
+                                                      <img src="img/appDevelopmentcarousal2.jpg" class="d-block w-100"
+                                                            alt="image error!!!">
                                                       <div class="carousel-caption d-none d-md-block">
                                                       </div>
                                                 </div>
                                                 <div class="carousel-item" id="carousal3">
-                                                      <img src="img/appDevelopmentcarousal3.jpg"
-                                                            class="d-block w-100" alt="image error!!!">
+                                                      <img src="img/appDevelopmentcarousal3.jpg" class="d-block w-100"
+                                                            alt="image error!!!">
                                                       <div class="carousel-caption d-none d-md-block">
                                                       </div>
                                                 </div>
@@ -381,11 +387,19 @@
                                                 android:name=".MainActivity"> is resolved to be
                                                 io.getstream.chat.android.ui.MainActivity. So the classes also must be
                                                 in the same package folder.</li>
-                              </div><br><hr><br>
+                              </div><br>
+                              <hr><br>
                               <h4>Conclusion : </h4>
-                              <p id="last_lines">This concludes part one of the 2022 Android Developer Roadmap. This section covered important details about Android’s architecture, so now you have a better grasp of how Android applications work under the hood.</p>
-                              <p id="last_lines">Again, don't be intimidated by the amount of information on this roadmap. Check out the sections that would be the most helpful to you to understand Android development.</p>
-                              <p id="last_lines">Also, you don’t have to learn all there is to know about the Android operating system. However, understanding the overall Android platform architecture will definitely help you to build better Android applications.</p><br><hr><br>
+                              <p id="last_lines">This concludes part one of the 2022 Android Developer Roadmap. This
+                                    section covered important details about Android’s architecture, so now you have a
+                                    better grasp of how Android applications work under the hood.</p>
+                              <p id="last_lines">Again, don't be intimidated by the amount of information on this
+                                    roadmap. Check out the sections that would be the most helpful to you to understand
+                                    Android development.</p>
+                              <p id="last_lines">Also, you don’t have to learn all there is to know about the Android
+                                    operating system. However, understanding the overall Android platform architecture
+                                    will definitely help you to build better Android applications.</p><br>
+                              <hr><br>
                         </div>
                   </div>
             </div>
@@ -394,7 +408,7 @@
       <div class="box1">
 
       </div>
-       <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+      <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-between p-4" style="background-color: #ff98a4">
                   <!-- Left -->
@@ -501,7 +515,7 @@
             </div>
             <!-- Copyright -->
 
-    </footer>
+      </footer>
 
 </body>
 

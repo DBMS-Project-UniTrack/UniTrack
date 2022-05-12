@@ -20,6 +20,7 @@ body{
     background: white;
     border-radius: 5px;
     padding: 25px;
+    height: 90vh;
 
 }
 header{
@@ -61,7 +62,7 @@ header{
 
 .box{
     height: 6vh;
-    width: 9vw;
+    width: 45vw;
     background: pink;
     margin-bottom: 9px;
     padding: 7px 5px;
@@ -81,6 +82,7 @@ header{
     margin-bottom: 8px;
     padding:15px;
     cursor: default;
+    font-size: medium;
 }
 .todolist li span{
     position: absolute;
@@ -94,6 +96,7 @@ header{
     align-items: center;
     background: rgb(238, 238, 50);
     cursor: pointer;
+    font-size: medium;
 }
 
 

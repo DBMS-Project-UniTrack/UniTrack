@@ -5,7 +5,7 @@
 .aboutcona{
     height: 130vh;
     width: 100%;
-    background-color: #FFECEC;
+    background-color: #ffffff;
 }
 .aboutcona1{
     height: 83vh;
@@ -130,7 +130,6 @@ border-radius: 1vw;
 .aboutpara7{
     text-align: center;
     font-size: 3vw;
-    font-family: var(--font1);
     font-weight: bold;
 }
 .aboutimg2{
@@ -319,5 +318,55 @@ font-size: 1.3vw;
     /* .aboutcona3{
         height: 180vh;
     } */
+    
+}
+
+/*new*/
+.flexboxtop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexchild {
+    flex-grow: 1;
+}
+
+.aboutunitrack {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.abouttext {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: center;
+}
+
+.aboutstudiesimg {
+    width: 40rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.howtocontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.howtoheading {
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.videocontainer {
+    width: 720px;
+    height: 450px;
     
 }

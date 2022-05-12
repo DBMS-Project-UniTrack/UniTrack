@@ -109,8 +109,8 @@ font-weight: bold;
     color: rgb(53, 40, 40);
 }
 .container1{
-    background-color: #F8D9CF;
-    height: 110vh;
+    background-color: #FFECEC;
+    height: 100vh;
     width: 100%;
     display: flex;
 }
@@ -118,10 +118,9 @@ font-weight: bold;
     height: 24vh;
     width: 43vw;
     position: relative;
-    top: 15vh;
+    top: 10vh;
     left: 6vw;
-    font-family: var(--font1);
-
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -139,12 +138,12 @@ font-weight: bold;
     .btnmain1{
         border: none;
         background-color: #FFD549;
-        height: 6.5vh;
+        height: 6vh;
         width: 15.4vw;
         border-radius: 4vh;
         border:2px solid rgb(33, 34, 33);
         margin: 20px 0 0 7px;
-        font-size: 2.5vw;
+        font-size: 2vw;
         font-weight: lighter;
     }
 }

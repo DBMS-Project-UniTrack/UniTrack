@@ -12,60 +12,66 @@
       <link rel="stylesheet" href="machineLearning.css">
       <link rel="shortcut icon" href="img/WebsiteLogoSample.png" type="image/x-icon">
       <title>Roadmap for Machine Learning</title>
+
+     
 </head>
 
 <body>
       <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="container-fluid">
-                        <a class="navbar-brand" href="index.hbs"><img src="img/mainlogo.svg" alt="..."
-                                    width="70rem">
-                              <h2>UniTrack</h2>
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                              aria-expanded="false" aria-label="Toggle navigation">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi"
-                                    fill="currentColor" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
-                                    </path>
-                              </svg>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li class="nav-item">
-                                          <a class="nav-link active" aria-current="page" href="index.hbs"
-                                                target="_main">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                          <a class="nav-link active" aria-current="page" href="about.hbs"
-                                                target="_main">About</a>
-                                    </li>
-                                    
-                                    <li class="nav-item">
-                                          <a class="nav-link active" href="roadmaps.hbs" target="_main">Roadmaps</a>
-                                    </li>
-                                    {{!-- <li class="nav-item">
-                                          <a class="nav-link active" href="Mytask.html" target="_main">My Task</a>
-                                    </li> --}}
-                                    <li class="nav-item">
-                                          <a class="nav-link active" href="semester.hbs" target="_main">Semester</a>
-                                    </li>
-                                    <li class="nav-item">
-                                          <a class="nav-link active" href="contactUs.hbs" target="_main">Contact
-                                                Us</a>
-                                    </li>
-                              </ul>
-                              {{!-- <div class="searchbarcontainer">
-                                    <input class="form-control me-2" id="searchhere" type="search"
-                                          placeholder="Search here" aria-label="Search">
-                                    <button type="button" id="searchbuttonprimary"
-                                          class="btn btn-primary">Search</button>
-                              </div> --}}
-                        </div>
-                  </div>
-            </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" style="margin-bottom: .1em;">
+        <div class="container-fluid">
+            <div class="logo1" ><img src="img/mainlogo.svg" style="height: 7vh;
+position: relative;
+left: 0vh;
+margin:0 10px 0 0;" alt=""></div>
+            <a class="navbar-brand" href="/index.hbs" style="font-weight: 800;">UniTrack</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  ml-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.hbs">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.hbs">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/roadmaps.hbs">Roadmaps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactUs.hbs">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard/home">Dashboard</a>
+                    </li>
+                    {{#if notloggedin}}
+                    <li class="nav-item btn1" style="font-weight: 600; color:black;">
+                        <a class="nav-link " href="login.hbs">Log In</a>
+                    </li>
+                    <li class="nav-item btn2" style="font-weight: 600;">
+                        <a class="nav-link " href="signup.hbs" style="color: white;">Sign Up</a>
+                    </li>
+                    {{!-- {{else}}
+                    <li class="nav-item dropdown d-flex ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="imgpro" src="img/profile-user.png" style="width: 2vw;" class="rounded-circle">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/profile.hbs">Edit Profile</a>
+                        <a class="dropdown-item" href="/users/logout">Log Out</a>
+                    </div>
+                </li> --}}
+                    {{/if}}
+
+                </ul>
+
+            </div>
+        </div>
+      </nav>
       </header>
 
       <main>
@@ -79,11 +85,10 @@
                         </a>
                   </div>
 
-                  <div class="card2" >
+                  <div class="card2">
                         <a href="appDevelopment.hbs" id="color">
                               <div class="card-body">
-                                    <h6 class="card-title"
-                                          style="font-family: 'IBM Plex Sans', sans-serif;">App
+                                    <h6 class="card-title" style="font-family: 'IBM Plex Sans', sans-serif;">App
                                           Development</h6>
                               </div>
                         </a>
@@ -91,7 +96,8 @@
                   <div class="card2" id="machineLearning">
                         <a href="machineLearning.hbs" id="color">
                               <div class="card-body">
-                                    <h6 class="card-title" id="third" style="font-family: 'IBM Plex Sans', sans-serif;">Machine
+                                    <h6 class="card-title" id="third" style="font-family: 'IBM Plex Sans', sans-serif;">
+                                          Machine
                                           Learning</h6>
                               </div>
                         </a>
@@ -162,7 +168,7 @@
                                                       </div>
                                                 </div>
                                           </div>
-                                          
+
                                           <button class="carousel-control-prev" type="button"
                                                 data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -331,7 +337,7 @@
             </div>
 
       </main>
- <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+      <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-between p-4" style="background-color: #ff98a4">
                   <!-- Left -->
@@ -438,7 +444,7 @@
             </div>
             <!-- Copyright -->
 
-    </footer>
+      </footer>
 
 </body>
 

@@ -133,7 +133,7 @@ border: none;
     right: 101px;
 }
 .btn1{
-    font-size: 1.6vw;
+    /*font-size: 1.6vw;*/
 font-weight: bold;
     /* width: 100px;
     height: 20px;
@@ -153,12 +153,13 @@ font-weight: bold;
 
 }
 .btn2{
-    background-color: #92FFD8;
+    background-color:#ff725e;
 border-radius: 28px;
-color: black;
-width: 6vw;
-font-size: 1.3vw;
+color: rgb(255, 255, 255);
+width: 8vw;
+/*font-size: 1.3vw;*/
 font-weight: bold;
+text-align: center;
     /* width: 100px;
     height: 40px;
     background-color:  #92FFD8;
@@ -179,7 +180,7 @@ font-weight: bold;
     color: rgb(53, 40, 40);
 }
 .container1{
-    background-color: #F8D9CF;
+    background-color: #FFECEC;
     height: 110vh;
     width: 100%;
     display: flex;
@@ -204,6 +205,7 @@ line-height: 4.5vw;
 font-weight: 600;
 }
 .btnmain1{
+    font-family: 'PT Sans Narrow', sans-serif;
     border: none;
 background-color: #FFD549;
 height: 6.5vh;
@@ -220,9 +222,10 @@ position: relative;
 top: 20vh;
 }
 .dem{
+    font-family: 'PT Sans Narrow', sans-serif;
     position: relative;
 left: 4vh;
-font-size: 3vw;
+font-size: 2vw;
 font-weight: lighter;
 cursor: pointer;
 }
@@ -253,7 +256,11 @@ top: 12vh;
     position: relative;
 top: 5vh;
 font-size: 3vw;
-font-family: var(--font1);
+font-family: poppins, sans-serif;
+
+font-weight: 500;
+
+font-style: normal;
 }
 .box{
     height: 50vh;
@@ -274,8 +281,10 @@ font-family: var(--font1);
     width: 100%;
     background-color: #F4F4F4;
     text-align: center;
-font-size: 2.3vw;
-font-family: var(--font1);
+font-size: 1.5vw;
+font-family: poppins, sans-serif;
+font-weight: 400;
+font-style: normal;
 line-height: 2.5vw;
 padding: 10px 0 0 0;
 }
@@ -297,7 +306,6 @@ padding: 10px 0 0 0;
 }
 .rect1
 {
-    
     top: 20vh;
 }
 .rect2

@@ -13,27 +13,33 @@ let connection = mysql.createConnection({
 
 // To display dashboard home for particular user
 exports.getDashboardHome = (req, res) => {
-    let useremail = req.session.email;
-    connection.query('SELECT * FROM login_users WHERE email = ?', [useremail], (err, userrow) => {
-        connection.query('SELECT * FROM profiles WHERE email = ?', [useremail], (err, profilerow) => {
-            let sem = userrow[0].semester;
-            console.log('semester is', sem);
-            connection.query('SELECT subject_code, subject_name, type from syllabus WHERE semester = ?', [sem], (err, subjectrows) => {
-                if (!err) {
-                    res.render('dashboardhome', { userrow, profilerow, subjectrows });
-                } else {
-                    console.log(err);
-                }
-                console.log('The data from user table: \n', userrow);
-                console.log('The data from profile table: \n', profilerow);
-                for (let i = 0; i < subjectrows.length; i++) {
-                    console.log('The data from syllabus table: \n', subjectrows[i]);
-                  }
-                
+    if(req.session.loggedin){
+        let useremail = req.session.email;
+        connection.query('SELECT * FROM login_users WHERE email = ?', [useremail], (err, userrow) => {
+            connection.query('SELECT * FROM profiles WHERE email = ?', [useremail], (err, profilerow) => {
+                let sem = userrow[0].semester;
+                console.log('semester is', sem);
+                connection.query('SELECT subject_code, subject_name, type from syllabus WHERE semester = ?', [sem], (err, subjectrows) => {
+                    if (!err) {
+                        res.render('dashboardhome', { userrow, profilerow, subjectrows });
+                    } else {
+                        console.log(err);
+                    }
+                    console.log('The data from user table: \n', userrow);
+                    console.log('The data from profile table: \n', profilerow);
+                    for (let i = 0; i < subjectrows.length; i++) {
+                        console.log('The data from syllabus table: \n', subjectrows[i]);
+                    }
+                    
+                })
             })
+                
         })
-            
-    })
+    } //close if
+    else{
+        res.render('login');
+    }
+    
     
 }
 
@@ -150,20 +156,6 @@ exports.getDetails = (req, res) => {
     });
 }
 
-// To display todo page for a particular user
-exports.getTodo = (req, res) => {
-    let userid= req.params.userid;
-
-    connection.query('SELECT * FROM todo WHERE userid = ?', [userid], (err, rows) => {
-        if(!err){
-            res.render('todo', { rows });
-        } else {
-            console.log(err);
-        }
-        console.log('The data from user table: \n', rows);
-    });
-}
-
 // To display the books page for a particular semid
 exports.getBooks = (req, res) => {
     let useremail = req.session.email;
@@ -235,9 +227,12 @@ exports.getNotesPageForSub = (req, res) => {
             let semid = profilerow[0].semester;
             console.log('The semid from profile row is', semid);
             connection.query('SELECT * from syllabus WHERE semester = ? and type = ?', [semid, 'Theory'], (err, subjectrows) => {
-                connection.query('SELECT notes.*, units.unit_name, syllabus.subject_name from notes, syllabus, units where notes.subject_code = ? and notes.subject_code = syllabus.subject_code and notes.subject_code = units.subject_code and notes.unit_num = units.unit_num order by unit_num', [sub_code], (err, subcoderows) => {
+                console.log(sub_code);
+                 connection.query('SELECT notes.*, units.unit_name, syllabus.subject_name from notes, syllabus, units where notes.subject_code = ? and notes.subject_code = syllabus.subject_code and notes.subject_code = units.subject_code and notes.unit_num = units.unit_num order by unit_num', [sub_code], async (err, subcoderows) => {
                     if (!err) {
-                        let sub_name = subcoderows[0].subject_name;
+                        
+                        await new Promise(resolve => setTimeout(resolve, 3000));
+                        let sub_name = subcoderows[1].subject_name;
                         let sub_name_obj = [{sub_name: sub_name}];
                         console.log('sub_name_obj is ');
                         console.log(sub_name_obj);
@@ -256,22 +251,109 @@ exports.getNotesPageForSub = (req, res) => {
     });
 }
 
+// Display Profile Page - get data
+exports.getUpdatePage = (req, res) => {
+    let useremail = req.session.email;
 
-// View Dashboard page according to sem using semid of params
-// exports.viewDashboard = (req, res) => {
+    connection.query('SELECT * FROM login_users WHERE email = ?', [useremail], (err, userrow) => {
+        connection.query('SELECT * FROM profiles WHERE email = ?', [useremail], (err, profilerow) => {
 
-//     let semid = req.params.semid;
-//     res.render('dashboardhome', {semid});
-//     // User the connection
-//     // connection.query('SELECT * FROM user WHERE status = "active"', (err, rows) => {
-//     //     // When done with the connection, release it
-//     //     if (!err) {
-//     //         let removedUser = req.query.removed;
-//     //         res.render('home', { rows, removedUser });
-//     //     } else {
-//     //         console.log(err);
-//     //     }
-//     //     console.log('The data from user table: \n', rows);
-//     // });
-// }
+                if (!err) {
+                    res.render('profile', { userrow, profilerow});
+                } else {
+                    console.log(err);
+                }
+                console.log('The data from user table: \n', userrow);
+                console.log('The data from profile table: \n', profilerow);
+        })
+    });
+}
 
+// Update Profile Table
+exports.updateUser = (req, res) => {
+    let useremail = req.session.email;
+
+    const {name, email, semester, roll_number, enrollment_number, phone_number} = req.body;
+
+    connection.query('UPDATE profiles set name = ?, email= ?, semester=?, phone_number=?, roll_number=?, enrollment_number=?', [name, email, semester, phone_number, roll_number,enrollment_number ], (err, updatedrow) => {
+        connection.query('SELECT * FROM profiles WHERE email = ?', [useremail], (err, profilerow) => {
+            connection.query( 'SELECT * FROM login_users WHERE email = ?', [useremail], (err, userrow)=> {
+                if (!err) {
+                    res.render('profile', { userrow, profilerow, updatedrow });
+                } else {
+                    console.log(err);
+                }
+                console.log('The data from user table: \n', userrow);
+                console.log('The data from profile table: \n', profilerow);
+            })
+        })
+    });
+
+}
+
+// To display todo page for a particular user
+exports.getTodo = (req, res) => {
+
+    let useremail = req.session.email;
+
+    connection.query('SELECT * FROM todo WHERE email = ?', [useremail], (err, rows) => {
+        if(!err){
+            res.render('todo', { rows });
+        } else {
+            console.log(err);
+        }
+        console.log('The data from todo table: \n', rows);
+    });
+}
+
+//Add todo
+exports.addtodo=async(req,res)=>{
+
+    const task=req.body.text;
+    const date=req.body.date;
+    let useremail = req.session.email;
+    connection.query("insert into todo set ?",{task:task,email:useremail,deadline:date},(err,results)=>{
+        if(err) throw err;
+        else{
+            connection.query("SELECT task,deadline from todo where email=? ORDER BY deadline ASC", [useremail], async(err,rows)=>{
+
+                res.render("todo",{rows});
+
+            })
+            
+        }
+
+    })}
+
+//Delete all
+exports.allClear=async(req,res)=>{
+
+    let useremail = req.session.email;
+    connection.query("DELETE from todo where email = ?", [useremail],(err,results)=>{
+        if(err) throw err;
+        else{
+            connection.query("SELECT task,deadline from todo where email=? ORDER BY deadline ASC", [useremail], async(err,rows)=>{
+
+                res.render("todo",{rows});
+
+            })
+            
+        }
+ })}
+
+ //Delete this todo
+exports.deleteTodo=async(req,res)=>{
+
+    let useremail = req.session.email;
+    let taskid = req.params.taskid;
+
+    connection.query("DELETE from todo where task_id=?", [taskid],(err,results)=>{
+        if(err) throw err;
+        else{
+            connection.query("SELECT task,deadline from todo where email=? ORDER BY deadline ASC", [useremail], async(err,rows)=>{
+
+                res.render("todo",{rows});
+
+            })
+        }
+})}

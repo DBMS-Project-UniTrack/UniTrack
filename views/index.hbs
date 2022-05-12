@@ -5,19 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dbms</title>
+    <title>Unitrack</title>
     <base href="/" />
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="semester.css">
+    <link rel="stylesheet" href="dashboardhome.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/vug3tdw.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="semester2.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {{!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <div class="nav-box1">
                 <div class="logo1"><img src="img/mainlogo.svg" alt=""></div>
@@ -31,16 +55,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active l1 l" aria-current="page" href="index.hbs">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.hbs">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link l2 l" href="about.hbs">About</a>
+                        <a class="nav-link" href="about.hbs">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link l5 l" href="roadmaps.hbs">Roadmaps</a>
+                        <a class="nav-link" href="roadmaps.hbs">Roadmaps</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link l5 l" href="contactUs.hbs">Contact Us</a>
+                        <a class="nav-link" href="contactUs.hbs">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard/home">Dashboard</a>
                     </li>
                     <li class="nav-item btn1">
                         <a class="nav-link " href="login.hbs">Log In</a>
@@ -61,6 +88,57 @@
                         Sign Up
                     </button>
                 </form> -->
+            </div>
+        </div>
+    </nav> --}}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" style="margin-bottom: .1em;">
+        <div class="container-fluid">
+            <div class="logo1"><img src="img/mainlogo.svg" alt=""></div>
+            <a class="navbar-brand" href="/index.hbs" style="font-weight: 800;">UniTrack</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  ml-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.hbs">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.hbs">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/roadmaps.hbs">Roadmaps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactUs.hbs">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard/home">Dashboard</a>
+                    </li>
+                    {{#if notloggedin}}
+                    <li class="nav-item btn1" style="font-weight: 600; color:black;">
+                        <a class="nav-link " href="login.hbs">Log In</a>
+                    </li>
+                    <li class="nav-item btn2" style="font-weight: 600;">
+                        <a class="nav-link " href="signup.hbs" style="color: white;">Sign Up</a>
+                    </li>
+                    {{else}}
+                    <li class="nav-item dropdown d-flex ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="imgpro" src="img/profile-user.png" class="rounded-circle">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/profile.hbs">Edit Profile</a>
+                        <a class="dropdown-item" href="/users/logout">Log Out</a>
+                    </div>
+                </li>
+                    {{/if}}
+
+                </ul>
+
             </div>
         </div>
     </nav>
@@ -99,22 +177,23 @@
         </nav>
     </header> -->
     <main>
-            <div class="container1">
-                <div class="boxa">
-                    <h6>LEARN EFFICIENTLY</h6>
-                    <P class="mainboxa">Welcome to your</P>
-                    <P class="mainboxa">one stop</P>
-                    <P class="mainboxa">destination for</P>
-                    <P class="mainboxa">managing online</P>
-                    <P class="mainboxa">college</P>
-                    <button class="btnmain1">GET STARTED </button><span class="logo2"><img src="img/logo.png"
-                            alt=""></span><span class="dem">PLAY DEMO</span>
-                </div>
-                <div class="img1">
-                    <img src="img/LandingPageImg-nobg.png" alt="">
-                </div>
+        <div class="container1">
+            <div class="boxa">
+                <h6>LEARN EFFICIENTLY</h6>
+                <P class="mainboxa">Welcome to your</P>
+                <P class="mainboxa">one stop</P>
+                <P class="mainboxa">destination for</P>
+                <P class="mainboxa">managing online</P>
+                <P class="mainboxa">college</P>
+                <a href="/about.hbs"><button class="btnmain1">GET STARTED </button></a>
+                <span class="logo2"><img src="img/logo.png"
+                        alt=""></span><span class="dem">PLAY DEMO</span>
             </div>
-        
+            <div class="img1">
+                <img src="img/LandingPageImg-nobg.png" alt="">
+            </div>
+        </div>
+
         <div class="container2">
             <div class="heading2">
                 <p class="heading2a">Learning made simple</p>
@@ -125,8 +204,7 @@
                         <img src="img/Group_1.png" alt="">
                     </div>
                     <div class="boxpara">
-                        <p>Access notes </p>
-                        <p>easily</p>
+                        <p>Access notes easily</p>
                     </div>
                 </div>
                 <div class="box">
@@ -135,8 +213,7 @@
                     </div>
                     <div class="boxpara">
 
-                        <p>Keep track of </p>
-                        <p>class schedule</p>
+                        <p>Keep track of class schedule</p>
                     </div>
                 </div>
                 <div class="box">
@@ -145,8 +222,7 @@
                     </div>
                     <div class="boxpara">
 
-                        <p>Finish task on</p>
-                        <p>time</p>
+                        <p>Finish task on time</p>
                     </div>
                 </div>
                 <div class="box">
@@ -155,8 +231,8 @@
                     </div>
                     <div class="boxpara">
 
-                        <p>Roadmaps </p>
-                        
+                        <p>Follow Roadmaps </p>
+
                     </div>
                 </div>
             </div>
@@ -225,120 +301,122 @@
                 <div class="rectboxb">
                     <h1 class="trt">Roadmaps</h1>
                     <p class="trtpara">
-                        Roadmaps are essential tool for tracking process against your objectives.It communicates upcoming work in one view.
-                        It can be your guide for prioritizing work , allocating resources , and tracking depedencies.We are here to make your learning easy.
+                        Roadmaps are essential tool for tracking process against your objectives.It communicates
+                        upcoming work in one view.
+                        It can be your guide for prioritizing work , allocating resources , and tracking depedencies.We
+                        are here to make your learning easy.
 
-                      </p>
+                    </p>
                 </div>
             </div>
         </div>
     </main>
     <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
-            <!-- Section: Social media -->
-            <section class="d-flex justify-content-between p-4" style="background-color: #ff98a4">
-                  <!-- Left -->
-                  <div class="me-5">
-                        <span>Get connected with us on social networks:</span>
-                  </div>
-                  <!-- Left -->
-
-                  <!-- Right -->
-                  <div class="logoimages">
-                        <a class="instagram" style="margin: 0rem 0.5rem" href="https://www.instagram.com" target="_main"
-                              id="instalogo">
-                              <img src="img/Instagram_logo_2016.svg.png" width="40vw" alt=""></a>
-                        <a class="linkedin" style="margin: 0rem 0.5rem" href="https://www.linkedin.com" target="_main"
-                              id="linkedinlogo"> <img src="img/LinkedIn_icon_circle.svg.png" width="40vw" alt=""></a>
-                        <a class="facebook" style="margin: 0rem 0.5rem" href="https://www.facebook.com" target="_main"
-                              id="facebooklogo"> <img src="img/facebook_icon.png" width="40vw" alt=""></a>
-                  </div>
-                  <!-- Right -->
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Links  -->
-            <section class="">
-                  <div class="container text-center text-md-start mt-5">
-                        <!-- Grid row -->
-                        <div class="row mt-3">
-                              <!-- Grid column -->
-                              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                    <!-- Content -->
-                                    <h6 class="text-uppercase fw-bold">Unitrack</h6>
-                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                          style="width: 60px; background-color: #ff98a4; height: 2px">
-                                    <p>
-                                          Hello User! , You can use our Website for many of your benefits i.e; Here you
-                                          can find Notes, Books, Previous Years Question papers, Roadmaps of different
-                                          types of fields like Web and App development etc.
-                                    </p>
-                              </div>
-                              <!-- Grid column -->
-
-                              <!-- Grid column -->
-                              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold">We Provide</h6>
-                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                          style="width: 60px; background-color: #ff98a4; height: 2px">
-                                    <p>
-                                          <a href="#!" class="text-white">Notes</a>
-                                    </p>
-                                    <p>
-                                          <a href="#!" class="text-white">Previous Years Question Papers</a>
-                                    </p>
-                                    <p>
-                                          <a href="#!" class="text-white">Syllabus</a>
-                                    </p>
-                                    <p>
-                                          <a href="#!" class="text-white">Important Books</a>
-                                    </p>
-
-                              </div>
-                              <!-- Grid column -->
-
-                              <!-- Grid column -->
-                              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold">Useful links</h6>
-                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                          style="width: 60px; background-color: #ff98a4; height: 2px">
-                                    <p>
-                                          <a href="todos.hbs" class="text-white">Todos</a>
-                                    </p>
-                                    <p>
-                                          <a href="roadmaps.hbs" class="text-white">Roadmaps</a>
-                                    </p>
-                                    <p>
-                                          <a href="#!" class="text-white">Help</a>
-                                    </p>
-                              </div>
-                              <!-- Grid column -->
-
-                              <!-- Grid column -->
-                              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold">Contact</h6>
-                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                          style="width: 60px; background-color: #ff98a4; height: 2px">
-                                    <p><i class="fas fa-home mr-3"></i>Jamia Milia Islamiya, New Delhi, India</p>
-                                    <p><i class="fas fa-envelope mr-3"></i> projectunitrack22@gmail.com</p>
-                                    <p><i class="fas fa-phone mr-3"></i>+91 9811964470</p>
-                                    <p><i class="fas fa-print mr-3"></i>+91 8957201204</p>
-                              </div>
-                              <!-- Grid column -->
-                        </div>
-                        <!-- Grid row -->
-                  </div>
-            </section>
-            <!-- Section: Links  -->
-
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-                  © 2022 Copyright:
-                  <a class="text-white" style="text-decoration: none;">Unitrack.com</a>
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-between p-4" style="background-color: #ff98a4">
+            <!-- Left -->
+            <div class="me-5">
+                <span>Get connected with us on social networks:</span>
             </div>
-            <!-- Copyright -->
+            <!-- Left -->
+
+            <!-- Right -->
+            <div class="logoimages">
+                <a class="instagram" style="margin: 0rem 0.5rem" href="https://www.instagram.com" target="_main"
+                    id="instalogo">
+                    <img src="img/Instagram_logo_2016.svg.png" width="40vw" alt=""></a>
+                <a class="linkedin" style="margin: 0rem 0.5rem" href="https://www.linkedin.com" target="_main"
+                    id="linkedinlogo"> <img src="img/LinkedIn_icon_circle.svg.png" width="40vw" alt=""></a>
+                <a class="facebook" style="margin: 0rem 0.5rem" href="https://www.facebook.com" target="_main"
+                    id="facebooklogo"> <img src="img/facebook_icon.png" width="40vw" alt=""></a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold">Unitrack</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #ff98a4; height: 2px">
+                        <p>
+                            Hello User! , You can use our Website for many of your benefits i.e; Here you
+                            can find Notes, Books, Previous Years Question papers, Roadmaps of different
+                            types of fields like Web and App development etc.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">We Provide</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #ff98a4; height: 2px">
+                        <p>
+                            <a href="#!" class="text-white">Notes</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">Previous Years Question Papers</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">Syllabus</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">Important Books</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #ff98a4; height: 2px">
+                        <p>
+                            <a href="todos.hbs" class="text-white">Todos</a>
+                        </p>
+                        <p>
+                            <a href="roadmaps.hbs" class="text-white">Roadmaps</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-white">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #ff98a4; height: 2px">
+                        <p><i class="fas fa-home mr-3"></i>Jamia Milia Islamiya, New Delhi, India</p>
+                        <p><i class="fas fa-envelope mr-3"></i> projectunitrack22@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i>+91 9811964470</p>
+                        <p><i class="fas fa-print mr-3"></i>+91 8957201204</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2022 Copyright:
+            <a class="text-white" style="text-decoration: none;">Unitrack.com</a>
+        </div>
+        <!-- Copyright -->
 
     </footer>
 

@@ -7,11 +7,11 @@
 }
 .logcontainer{
     max-width: 60vw;
-    height: 100vh;
-    margin: auto;
-    background-color: #F8D9CF;
+    height: 90vh;
+    margin: auto;margin-top: 5vh;
+    background-color: #FFECEC;
     border-radius: 12px;
-    border: #B59191 solid 2px;
+    border: #F8D9CF; solid 2px;
     
 }
 .p1{

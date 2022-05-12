@@ -6,9 +6,6 @@ const dashboardController = require('../controllers/dashboardController');
 //Get dashboard Home
 router.get('/home', dashboardController.getDashboardHome);
 
-//Get todo page
-router.get('/todo/:userid', dashboardController.getTodo);
-
 let upload = require('../config/multer.config.js');
 
 //Get Syllabus Home page
@@ -35,6 +32,24 @@ router.get('/notes/:semid', dashboardController.getNotesPage);
 
 //Get notes page for particular subject
 router.get('/notes/subject/:sub_code', dashboardController.getNotesPageForSub);
+
+//Get update profile page for a user
+router.get('/update', dashboardController.getUpdatePage);
+
+//Update the profile and user tables
+router.post('/update/user', dashboardController.updateUser);
+
+//Get todo page
+router.get('/todo', dashboardController.getTodo);
+
+//Add todo
+router.post('/todo/add', dashboardController.addtodo);
+
+//Delete all todo
+router.post('/todo/allclear', dashboardController.allClear);
+
+//Delete this todo
+router.post('/todo/delete/:taskid', dashboardController.deleteTodo);
 
 
 module.exports = router;
