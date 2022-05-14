@@ -276,20 +276,24 @@ exports.updateUser = (req, res) => {
     const {name, email, semester, roll_number, enrollment_number, phone_number} = req.body;
 
     connection.query('UPDATE profiles set name = ?, email= ?, semester=?, phone_number=?, roll_number=?, enrollment_number=?', [name, email, semester, phone_number, roll_number,enrollment_number ], (err, updatedrow) => {
-        connection.query('SELECT * FROM profiles WHERE email = ?', [useremail], (err, profilerow) => {
-            connection.query( 'SELECT * FROM login_users WHERE email = ?', [useremail], (err, userrow)=> {
-                if (!err) {
-                    res.render('profile', { userrow, profilerow, updatedrow });
-                } else {
-                    console.log(err);
-                }
-                console.log('The data from user table: \n', userrow);
-                console.log('The data from profile table: \n', profilerow);
+        connection.query('UPDATE login_users set name = ?, email= ?, semester=?', [name, email, semester ], (err, updatedloginrow) => {
+            connection.query('SELECT * FROM profiles WHERE email = ?', [useremail], (err, profilerow) => {
+                connection.query( 'SELECT * FROM login_users WHERE email = ?', [useremail], (err, userrow)=> {
+                    if (!err) {
+                        res.render('profile', { userrow, profilerow, updatedrow });
+                    } else {
+                        console.log(err);
+                    }
+                    console.log('The data from user table: \n', userrow);
+                    console.log('The data from profile table: \n', profilerow);
+                })
             })
-        })
+        }
+        )
     });
 
 }
+
 
 // To display todo page for a particular user
 exports.getTodo = (req, res) => {
