@@ -4,6 +4,7 @@ const app = express();
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
 const path = require('path');
+const port = process.env.PORT || 5001
 
 //new
 var createError = require('http-errors');
@@ -214,7 +215,7 @@ app.get('/profile.hbs', (req, res) => {
 
 
 //Server listening on port 5001
-var server =  app.listen(5001, () => {
+var server =  app.listen(port, () => {
   console.log('server is listening on port 5001');
 })
 
