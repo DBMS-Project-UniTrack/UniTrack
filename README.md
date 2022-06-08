@@ -22,5 +22,6 @@ Students of FET-JMI, Batch of 2020-24
 - 20BME012 Nazeed Khan
 - 20BCS002 Aaliyah Beg
 - 20BCS024 Fatima Shafique
+- 20BCS010 Anzil Mufti
 - 20BCS051 Tirth B Dalwadi
 ##
